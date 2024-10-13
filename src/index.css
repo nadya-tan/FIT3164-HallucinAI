@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  #root {
+    @apply bg-zinc-950 text-zinc-100 min-h-screen antialiased font-sans flex flex-col relative;
+  }
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight mt-12 border-b pb-2 border-zinc-800;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight mt-8;
+  }
+  p {
+    @apply mt-6 leading-7;
+  }
+  ul {
+    @apply mt-6 list-disc pl-6;
+  }
+}

@@ -34,7 +34,7 @@ function DetectionSelfCheckGPTOriginal({ data }) {
     return arr;
   }, [data]);
   return data ? (
-    <ChartContainer className="min-h-40 w-full py-4" config={{}} ref={ref}>
+    <ChartContainer className="min-h-[200px] w-full py-4" config={{}} ref={ref}>
       <div className="w-full flex flex-row justify-center items-center">
         <span>
           SelfCheckGPT Evaluation vs. Original Passage: Score Distribution

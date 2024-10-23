@@ -18,8 +18,8 @@ function App() {
         }}
       >
         <div className="absolute inset-0 bg-zinc-950/90 backdrop-blur-md"></div>
-        <div className="container flex-1 items-start grid grid-cols-[240px_1fr] gap-10 relative">
-          <aside className="h-[calc(100vh-3.5rem)] sticky w-full py-8 pr-6 block shrink-0 top-14">
+        <div className="container flex-1 items-start grid grid:cols-1 lg:grid-cols-[240px_1fr] gap-10 relative">
+          <aside className="h-[calc(100vh-3.5rem)] hidden lg:block sticky w-full py-8 pr-6 shrink-0 top-14">
             <div className="grid grid-flow-row text-sm">
               <Link
                 href="/overview"
@@ -60,6 +60,30 @@ function App() {
       <footer className="container flex flex-row justify-start h-24 text-zinc-400 items-center text-sm">
         Created by [Team MDS 16] © 2024
       </footer>
+      <div className="sticky bottom-0 z-50 flex flex-row justify-center items-center h-14 bg-zinc-950/90 backdrop-blur-md border-t border-t-zinc-600 lg:hidden">
+        <Link
+          href="/overview"
+          className={(active) =>
+            cn(
+              "flex-1 h-full text-zinc-400 grid place-items-center border-r border-r-zinc-600",
+              active && "font-medium text-zinc-200"
+            )
+          }
+        >
+          Overview
+        </Link>
+        <Link
+          href="/results"
+          className={(active) =>
+            cn(
+              "flex-1 h-full text-zinc-400 grid place-items-center",
+              active && "font-medium text-zinc-200"
+            )
+          }
+        >
+          Research Results
+        </Link>
+      </div>
     </Router>
   );
 }

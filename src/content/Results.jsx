@@ -30,28 +30,42 @@ function Results() {
   useEffect(() => {
     async function fetchData() {
       const detection_factcc = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/detection_factcc.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/detection_factcc.json`
       );
       const detection_selfcheck_original = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/detection_selfcheckgpt_compare_original.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/detection_selfcheckgpt_compare_original.json`
       );
       const detection_selfcheck_self = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/detection_selfcheckgpt_compare_self.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/detection_selfcheckgpt_compare_self.json`
       );
       const detection_alignscore = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/detection_alignscore.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/detection_alignscore.json`
       );
       const reduction_selfcheck = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/reduction_selfcheckgpt.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/reduction_selfcheckgpt.json`
       );
       const reduction_cove = await fetch(
         `${import.meta.env.BASE_URL}data/${modelSelection}/reduction_cove.json`
       );
       const annotated_reduction_selfcheck = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/reduction_selfcheckgpt_annotated.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/reduction_selfcheckgpt_annotated.json`
       );
       const annotated_reduction_cove = await fetch(
-        `${import.meta.env.BASE_URL}data/${modelSelection}/reduction_cove_annotated.json`
+        `${
+          import.meta.env.BASE_URL
+        }data/${modelSelection}/reduction_cove_annotated.json`
       );
 
       setModelData({
@@ -175,7 +189,10 @@ function Results() {
         better="positive"
         title="CoVe Reduction"
       />
-      <ScrollArea className="mt-4 h-[800px] w-full">
+      <span className="mt-4 text-zinc-400 leading-tight lg:hidden">
+        Table hidden on mobile view.
+      </span>
+      <ScrollArea className="mt-4 h-[800px] w-full hidden lg:block">
         <Table>
           <TableHeader>
             {[
@@ -228,7 +245,10 @@ function Results() {
         title="SelfCheckGPT Reduction"
         better="negative"
       />
-      <ScrollArea className="mt-4 h-[800px] w-full">
+      <span className="mt-4 text-zinc-400 leading-tight lg:hidden">
+        Table hidden on mobile view.
+      </span>
+      <ScrollArea className="mt-4 h-[800px] w-full hidden lg:block">
         <Table>
           <TableHeader>
             {[

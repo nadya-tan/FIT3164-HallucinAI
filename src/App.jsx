@@ -70,7 +70,7 @@ function App() {
             )
           }
         >
-          Overview
+          Research Overview
         </Link>
         <Link
           href="/results"
@@ -81,7 +81,7 @@ function App() {
             )
           }
         >
-          Research Results
+          Experimental Results
         </Link>
       </div>
     </Router>
